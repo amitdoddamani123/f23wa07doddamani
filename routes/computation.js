@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
   var coshF = Math.log1p(rnd).toFixed(2);
  
   res.render('computation', {
-    coshF: `log1p Value is  ${coshF}`
+    coshF: `log1p(${rnd}) Value is  ${coshF}`
   }
 
   );
