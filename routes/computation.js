@@ -1,14 +1,17 @@
 var express = require('express');
 var router = express.Router();
-var rnd;
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('computation', { titles: 'Amit Math function' });
+router.get('/', function (req, res, next) {
+  var rnd = Math.random().toFixed(2);
+  var coshF = Math.log1p(rnd).toFixed(2);
+ 
+  res.render('computation', {
+    coshF: `log1p Value is  ${coshF}`
+  }
 
-  rnd= Math.random();
-var coshF=Math.acosh(rnd);
-res.send(' acosh('+rnd+') is='+coshF);
+  );
+
 
 });
 
