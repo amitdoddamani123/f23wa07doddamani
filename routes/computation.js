@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
   rnd= Math.random();
 var coshF=Math.acosh(rnd);
-res.send('acosh('+rnd+') is='+coshF);
+res.send(' acosh('+rnd+') is='+coshF);
 
 });
 
